@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>  
+    <div class="body-container">
+        <div class="header">
+            <div class="logo"><b>OPEN GATE HOTEL</b></div>
+            <div class="nav-item">ROOMS</div>
+            <div class="nav-item">ABOUT</div>
+            <div class="nav-item" onclick="booking_form('book')">BOOK NOW</div>
+            <div class="nav-item">CONTACT US</div>
+        </div>
+        
+        <div class="content">
+            <div id="check-availability-form">
+                <form action="check_availability.php" method="POST">
+                    <span class="cancel" onclick="booking_form('cancel')">x</span>
+                    <label>Check In</label>
+                    <input type="date" name="check_in" required>
+                    <label>Check Out</label>
+                    <input type="date" name="check_out" required>
+                    <p><span id="nights-count">0<span> Nights</p>
+                    <button type="submit">Check Availability</button>
+                </form>
+            </div>
+            
+            <h2>LOOKING FOR A LAXURIOUS HOTEL AROUND PRETORIA ?</h2>
+            <h2 class="nav-item" onclick="booking_form('book')">BOOK ONLINE TODAY</h2>
+        </div>
+        <div class="section-2">
+            <h2>ROOMS</h2>
+            <hr>
+            <div class="rooms">
+                <div class="rooms-item">
+                    <h3>ZUMA ROOM</h3>
+                    <ul>
+                        <li>Shower</li>
+                        <li>Kitchen</li>
+                        <li>Launge</li>
+                        <li>DsTv</li>
+                    </ul>
+                </div>
+                <div class="rooms-item">
+                    <h3>MBEKI ROOM</h3>
+                    <ul>
+                        <li>Swimming Pool</li>
+                        <li>WiFi</li>
+                        <li>launge</li>
+                        <li>DsTv</li>
+                        <li>restaurent</li>
+                    </ul>
+                </div>
+                <div class="rooms-item">
+                    <h3>MADIBA ROOM</h3>
+                    <ul>
+                        <li>Shower</li>
+                        <li>Kitchen</li>
+                        <li>Launge</li>
+                        <li>DsTv</li>
+                        <li>Study room</li>
+                        <li>Gym</li>
+                        <li>Fridge</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="logo"><b>OPEN GATE HOTEL</b></div>
+            <div class="footer-item">ROOMS</div>
+            <div class="footer-item">ABOUT</div>
+            <div class="footer-item">BOOK NOW</div>
+            <div class="footer-item">CONTACT US</div>
+        </div>
+        <script>
+            document.getElementById('check-availability-form').style.display = 'none';
+
+            function booking_form(action){ 
+                if(action == 'book')
+                    return document.getElementById('check-availability-form').style.display = 'block';
+                return document.getElementById('check-availability-form').style.display = 'none';
+            } 
+
+        </script>
+    </div>
+</body>
+</html>
